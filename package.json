@@ -9,6 +9,7 @@
     "start-android": "react-native run-ios & react-native start"
   },
   "dependencies": {
+    "icon-font-generator": "^2.1.10",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "0.59.9",
