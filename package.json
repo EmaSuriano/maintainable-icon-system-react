@@ -12,18 +12,12 @@
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "0.59.9",
-    "react-scripts": "^3.0.1",
-    "require-dir": "^1.2.0"
+    "react-scripts": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
-    "babel-jest": "^24.8.0",
-    "metro-react-native-babel-preset": "^0.54.1",
-    "react-test-renderer": "16.8.3"
-  },
-  "jest": {
-    "preset": "react-native"
+    "metro-react-native-babel-preset": "^0.54.1"
   },
   "browserslist": {
     "production": [
