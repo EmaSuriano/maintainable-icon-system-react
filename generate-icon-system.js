@@ -22,11 +22,14 @@ const icons = readdirSync(ICON_SOURCE_FOLDER)
 const generateWebAsset = icons => {
   const iconMapLines = [
     ...icons.map(
-      icon => `import { ReactComponent as ${icon} } from './${icon}.svg';`,
+      icon =>
+        `import { ReactComponent as ${toPascalCase(
+          icon,
+        )} } from './${icon}.svg';`,
     ),
     '',
     'export default {',
-    ...icons.map(icon => `${icon}, `),
+    ...icons.map(icon => `"${icon}": ${toPascalCase(icon)}, `),
     '};',
   ];
 
@@ -52,7 +55,9 @@ const generateReactNativeAsset = icons => {
     `icon-font-generator ./${ICON_SOURCE_FOLDER}/*.svg -o ./${ICON_SOURCE_FOLDER} -n ${FONT_NAME} -c false --html false --types ttf`,
   );
 
-  const glyphMap = JSON.parse(readFileSync(`./${ICON_SOURCE_FOLDER}/${FONT_NAME}.json`));
+  const glyphMap = JSON.parse(
+    readFileSync(`./${ICON_SOURCE_FOLDER}/${FONT_NAME}.json`),
+  );
   const customFontLines = [
     '{',
     ...Object.keys(glyphMap).map(
@@ -66,4 +71,7 @@ const generateReactNativeAsset = icons => {
 
 writeFileSync(`${ICON_OUTPUT_FOLDER}/index.js`, generateIndex(icons));
 writeFileSync(`${ICON_SOURCE_FOLDER}/icon-map.js`, generateWebAsset(icons));
-writeFileSync(`./${ICON_SOURCE_FOLDER}/${FONT_NAME}.json`, generateReactNativeAsset(generateReactNativeAsset);
+writeFileSync(
+  `./${ICON_SOURCE_FOLDER}/${FONT_NAME}.json`,
+  generateReactNativeAsset(generateReactNativeAsset),
+);
