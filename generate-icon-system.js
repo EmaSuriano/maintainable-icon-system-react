@@ -13,41 +13,38 @@ const toPascalCase = string =>
     .match(/[a-z]+/gi)
     .map(word => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase())
     .join('');
-const writeFile = console.log;
 
 const icons = readdirSync(ICON_SOURCE_FOLDER)
   .filter(isSVG)
   .map(removeExtension);
 
-const generateWebAsset = icons => {
-  const iconMapLines = [
-    ...icons.map(
-      icon =>
-        `import { ReactComponent as ${toPascalCase(
-          icon,
-        )} } from './${icon}.svg';`,
-    ),
-    '',
-    'export default {',
-    ...icons.map(icon => `"${icon}": ${toPascalCase(icon)}, `),
-    '};',
-  ];
-
-  return iconMapLines.join('\n');
-};
-
 const generateIndex = icons => {
+  const iconToComponent = icon =>
+    `export const ${toPascalCase(icon)} = props => <Icon {...props} name="${icon}" />;`;
+
   const indexLines = [
     "import React from 'react';",
     "import Icon from './Icon';",
     '',
-    ...icons.map(icon => {
-      const componentName = toPascalCase(icon);
-      return `export const ${componentName} = props => <Icon {...props} name="${icon}" />`;
-    }),
+    icons.map(iconToComponent).join('\n'),
   ];
 
   return indexLines.join('\n');
+};
+
+const generateWebAsset = icons => {
+  const buildIconImport = icon =>
+    `import { ReactComponent as ${toPascalCase(icon)} } from './${icon}.svg';`;
+
+  const iconMapLines = [
+    icons.map(buildIconImport).join('\n'),
+    '',
+    'export default {',
+    icons.map(icon => `"${icon}": ${toPascalCase(icon)}, `).join('\n'),
+    '};',
+  ];
+
+  return iconMapLines.join('\n');
 };
 
 const generateReactNativeAsset = icons => {
@@ -55,14 +52,12 @@ const generateReactNativeAsset = icons => {
     `icon-font-generator ./${ICON_SOURCE_FOLDER}/*.svg -o ./${ICON_SOURCE_FOLDER} -n ${FONT_NAME} -c false --html false --types ttf`,
   );
 
-  const glyphMap = JSON.parse(
-    readFileSync(`./${ICON_SOURCE_FOLDER}/${FONT_NAME}.json`),
-  );
+  const glyphMap = JSON.parse(readFileSync(`./${ICON_SOURCE_FOLDER}/${FONT_NAME}.json`));
   const customFontLines = [
     '{',
-    ...Object.keys(glyphMap).map(
-      value => `"${value}": ${parseInt(glyphMap[value].substr(1), 16)},`,
-    ),
+    Object.keys(glyphMap)
+      .map(value => `"${value}": ${parseInt(glyphMap[value].substr(1), 16)}`)
+      .join(',\n'),
     '}',
   ];
 

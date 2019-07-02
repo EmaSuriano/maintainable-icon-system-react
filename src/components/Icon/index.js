@@ -1,5 +1,43 @@
 import React from 'react';
 import Icon from './Icon';
 
-export const LogoWithWeirdName = props => <Icon {...props} name="logo-with-weird-name" />
-export const Logo = props => <Icon {...props} name="logo" />
+export const Louvre = props => <Icon {...props} name="001-louvre" />;
+export const LeaningTowerOfPisa = props => <Icon {...props} name="002-leaning tower of pisa" />;
+export const Coliseum = props => <Icon {...props} name="003-coliseum" />;
+export const Stonehenge = props => <Icon {...props} name="004-stonehenge" />;
+export const Torii = props => <Icon {...props} name="005-torii" />;
+export const Gherkin = props => <Icon {...props} name="006-gherkin" />;
+export const ChristTheRedeemer = props => <Icon {...props} name="007-christ the redeemer" />;
+export const Moai = props => <Icon {...props} name="008-moai" />;
+export const CloudGate = props => <Icon {...props} name="009-cloud gate" />;
+export const EmpireStateBuilding = props => <Icon {...props} name="010-empire state building" />;
+export const Atomium = props => <Icon {...props} name="011-atomium" />;
+export const TowerBridge = props => <Icon {...props} name="012-Tower bridge" />;
+export const MayanPyramid = props => <Icon {...props} name="013-mayan pyramid" />;
+export const WashingtonMonument = props => <Icon {...props} name="014-washington monument" />;
+export const ValleyRocks = props => <Icon {...props} name="015-valley rocks" />;
+export const BurjAlArab = props => <Icon {...props} name="016-burj al arab" />;
+export const SydneyOperaHouse = props => <Icon {...props} name="017-sydney opera house" />;
+export const Kremlin = props => <Icon {...props} name="018-kremlin" />;
+export const WhiteHouse = props => <Icon {...props} name="019-white house" />;
+export const Arch = props => <Icon {...props} name="020-arch" />;
+export const Pyramid = props => <Icon {...props} name="021-pyramid" />;
+export const StatueOfLiberty = props => <Icon {...props} name="022-statue of liberty" />;
+export const LondonEye = props => <Icon {...props} name="023-london eye" />;
+export const BrandenburgGate = props => <Icon {...props} name="024-brandenburg gate" />;
+export const TajMahal = props => <Icon {...props} name="025-taj mahal" />;
+export const Hollywood = props => <Icon {...props} name="026-hollywood" />;
+export const Hallgrimskirkja = props => <Icon {...props} name="027-hallgrimskirkja" />;
+export const HotelDeGlace = props => <Icon {...props} name="028-hotel de glace" />;
+export const Berlin = props => <Icon {...props} name="029-berlin" />;
+export const BerlinWall = props => <Icon {...props} name="030-berlin wall" />;
+export const BigBen = props => <Icon {...props} name="031-big ben" />;
+export const GoldenGate = props => <Icon {...props} name="032-golden gate" />;
+export const Parthenon = props => <Icon {...props} name="033-parthenon" />;
+export const Windmill = props => <Icon {...props} name="034-windmill" />;
+export const WalkOfFame = props => <Icon {...props} name="035-walk of fame" />;
+export const RialtoBridge = props => <Icon {...props} name="036-rialto bridge" />;
+export const PetronasTwinTower = props => <Icon {...props} name="037-petronas twin tower" />;
+export const GreatWallOfChina = props => <Icon {...props} name="038-great wall of china" />;
+export const SpaceNeedle = props => <Icon {...props} name="039-space needle" />;
+export const EiffelTower = props => <Icon {...props} name="040-eiffel tower" />;
