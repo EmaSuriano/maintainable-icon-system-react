@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "generate-icon": "node generate-icon-system",
+    "generate-icon": "node scripts/generate-icon-system",
     "start-web": "react-scripts start",
     "start-ios": "react-native run-ios & react-native start",
     "start-android": "react-native run-ios & react-native start"
@@ -13,7 +13,8 @@
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "0.59.9",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.0.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

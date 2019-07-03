@@ -1,12 +1,24 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import { Logo, LogoWithWeirdName } from './components/Icon';
+import styled from 'styled-components';
+import { WhiteHouse, EiffelTower } from './components/Icon';
+import Landmark from './components/Landmark';
+
+const Grid = styled.div`
+  display: flex;
+`;
 
 const App = () => (
   <div>
-    <h1>My Amazing logo!</h1>
-    <Logo />
-    <LogoWithWeirdName />
+    <h1>Landmark of the world</h1>
+    <Grid>
+      <Landmark label="🇺🇸">
+        <WhiteHouse />
+      </Landmark>
+      <Landmark>
+        <EiffelTower />
+      </Landmark>
+    </Grid>
   </div>
 );
 
