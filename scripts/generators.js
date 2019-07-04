@@ -9,7 +9,10 @@ const generateIconComponentFile = (icons, { dir }) => {
     '',
     icons
       .map(
-        icon => `export const ${toPascalCase(icon)} = props => <Icon {...props} name="${icon}" />;`,
+        icon =>
+          `export const ${toPascalCase(
+            icon,
+          )} = props => <Icon {...props} name="${icon}" />;`,
       )
       .join('\n'),
   ].join('\n');
@@ -21,7 +24,12 @@ const generateIconComponentFile = (icons, { dir }) => {
 const generateWebIconMap = (icons, { dir }) => {
   const iconMapContent = [
     icons
-      .map(icon => `import { ReactComponent as ${toPascalCase(icon)} } from './${icon}.svg';`)
+      .map(
+        icon =>
+          `import { ReactComponent as ${toPascalCase(
+            icon,
+          )} } from './${icon}.svg';`,
+      )
       .join('\n'),
     '',
     'export default {',
@@ -33,20 +41,22 @@ const generateWebIconMap = (icons, { dir }) => {
   console.log('Web Icon Map created! ✅');
 };
 
-const generateReactNativeAsset = (icons, { dir, fontName }) => {
+const generateReactNativeAsset = (icons, { dir, fontName, fontDir }) => {
   execSync(
-    `icon-font-generator ./${dir}/*.svg -o ./${dir} -n ${fontName} -c false --html false --types ttf`,
+    `icon-font-generator ./${dir}/*.svg -o ./${fontDir} -n ${fontName} -c false --html false --types ttf`,
   );
 
-  const glyphMap = JSON.parse(readFileSync(`./${dir}/${fontName}.json`));
+  const glyphMap = JSON.parse(readFileSync(`./${fontDir}/${fontName}.json`));
 
   const customFontContent = [
     '{',
-    icons.map(value => `"${value}": ${parseInt(glyphMap[value].substr(1), 16)}`).join(',\n'),
+    icons
+      .map(value => `"${value}": ${parseInt(glyphMap[value].substr(1), 16)}`)
+      .join(',\n'),
     '}',
   ].join('\n');
 
-  writeFileSync(`./${dir}/${fontName}.json`, customFontContent);
+  writeFileSync(`./${fontDir}/${fontName}.json`, customFontContent);
   console.log('React Native Asset generated! ✅');
 };
 

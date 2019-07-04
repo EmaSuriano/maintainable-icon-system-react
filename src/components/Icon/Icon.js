@@ -1,5 +1,5 @@
 import React from 'react';
-import { propTypes, defaultProps } from './Icon.props';
+import { propTypes } from './Icon.props';
 import iconMap from 'assets/icons/icon-map';
 
 const EmptyIcon = () => <div />;
@@ -10,6 +10,10 @@ const Icon = ({ name, size, color, ...rest }) => {
 };
 
 Icon.propTypes = propTypes;
-Icon.defaultProps = defaultProps;
+
+Icon.defaultProps = {
+  size: '5em',
+  color: 'black',
+};
 
 export default Icon;

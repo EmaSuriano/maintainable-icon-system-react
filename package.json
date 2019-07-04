@@ -6,7 +6,8 @@
     "generate-icon": "node scripts/generate-icon-system",
     "start-web": "react-scripts start",
     "start-ios": "react-native run-ios & react-native start",
-    "start-android": "react-native run-ios & react-native start"
+    "start-android": "react-native run-ios & react-native start",
+    "lint": "eslint src"
   },
   "dependencies": {
     "icon-font-generator": "^2.1.10",
@@ -14,6 +15,7 @@
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "0.59.9",
+    "react-native-vector-icons": "^6.6.0",
     "react-scripts": "^3.0.1",
     "styled-components": "^4.3.2"
   },
@@ -32,6 +34,15 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "license": "MIT",
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts/"
     ]
   }
 }
