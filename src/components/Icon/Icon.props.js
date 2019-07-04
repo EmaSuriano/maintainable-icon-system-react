@@ -5,3 +5,8 @@ export const propTypes = {
   size: PropTypes.string,
   color: PropTypes.string,
 };
+
+export const defaultProps = {
+  size: '5em',
+  color: 'black',
+};

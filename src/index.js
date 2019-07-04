@@ -1,14 +1,13 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import * as Icons from './components/Icon';
-import Landmark from './components/Landmark';
 import Grid from './components/Grid';
 import randomColor from 'randomcolor';
 
 const App = () => (
   <Grid>
-    {Object.values(Icons).map(Icon => (
-      <Icon color={randomColor()} />
+    {Object.entries(Icons).map(([name, Icon]) => (
+      <Icon color={randomColor()} onClick={() => alert(`<${name} />`)} />
     ))}
   </Grid>
 );
