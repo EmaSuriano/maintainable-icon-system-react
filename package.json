@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "icon-font-generator": "^2.1.10",
+    "randomcolor": "^0.5.4",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "0.59.9",
