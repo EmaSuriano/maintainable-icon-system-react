@@ -2,6 +2,8 @@
 
 > Demo Repository to setup an icon system that can be easily maintanable between React and React Native
 
+> One SVG icon to rule them all 🔥
+
 This repository serves as example of this article: [Building a Maintanable Icon System in React and React Native](Coming soon ...)
 
 ## Runnig the project
