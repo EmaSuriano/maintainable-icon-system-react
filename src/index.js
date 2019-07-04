@@ -6,20 +6,65 @@ import Landmark from './components/Landmark';
 
 const Grid = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20vw;
+`;
+
+
 const App = () => (
-  <div>
+  <Layout>
     <h1>Landmark of the world</h1>
     <Grid>
-      <Landmark label="🇺🇸">
-        <WhiteHouse />
+      <Landmark label="🇺🇸" background="blue">
+        <WhiteHouse color="white" />
       </Landmark>
-      <Landmark>
-        <EiffelTower />
+      <Landmark label="🇮🇹" background="green">
+        <EiffelTower color="white"/>
+      </Landmark>
+      <Landmark label="🇺🇸" background="blue">
+        <WhiteHouse color="white" />
+      </Landmark>
+      <Landmark label="🇮🇹" background="green">
+        <EiffelTower color="white"/>
+      </Landmark>
+      <Landmark label="🇺🇸" background="blue">
+        <WhiteHouse color="white" />
+      </Landmark>
+      <Landmark label="🇮🇹" background="green">
+        <EiffelTower color="white"/>
+      </Landmark>
+      <Landmark label="🇺🇸" background="blue">
+        <WhiteHouse color="white" />
+      </Landmark>
+      <Landmark label="🇮🇹" background="green">
+        <EiffelTower color="white"/>
+      </Landmark>
+      <Landmark label="🇺🇸" background="blue">
+        <WhiteHouse color="white" />
+      </Landmark>
+      <Landmark label="🇮🇹" background="green">
+        <EiffelTower color="white"/>
+      </Landmark>
+      <Landmark label="🇺🇸" background="blue">
+        <WhiteHouse color="white" />
+      </Landmark>
+      <Landmark label="🇮🇹" background="green">
+        <EiffelTower color="white"/>
+      </Landmark>
+      <Landmark label="🇺🇸" background="blue">
+        <WhiteHouse color="white" />
+      </Landmark>
+      <Landmark label="🇮🇹" background="green">
+        <EiffelTower color="white"/>
       </Landmark>
     </Grid>
-  </div>
+  </Layout>
 );
 
 ReactDOM.render(<App />, document.getElementById('root'));

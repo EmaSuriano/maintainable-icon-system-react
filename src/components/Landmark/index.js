@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LandmarkContainer = styled.div`
-  background: red;
+  background: ${props => props.background || '#FFF'};
   position: relative;
   display: block;
   border-radius: 50%;
@@ -19,7 +19,7 @@ const LandmarkLabel = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background: #3339;
+  background: #fff6;
   border-radius: 50%;
   opacity: 0;
   display: flex;
@@ -33,7 +33,7 @@ const LandmarkLabel = styled.div`
 `;
 
 const Landmark = ({ children, label, background }) => (
-  <LandmarkContainer label={label} background={background}>
+  <LandmarkContainer background={background}>
     <LandmarkIcon>{children}</LandmarkIcon>
     <LandmarkLabel>
       <h1>{label}</h1>
