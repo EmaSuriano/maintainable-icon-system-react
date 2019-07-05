@@ -1,13 +1,15 @@
 {
   "name": "MaintainableIconSystemReact",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "generate-icon": "node scripts/generate-icon-system",
     "start-web": "react-scripts start",
+    "build-web": "react-scripts build",
     "start-ios": "react-native run-ios & react-native start",
     "start-android": "react-native run-android & react-native start",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "predeploy": "npm run build-web",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "icon-font-generator": "^2.1.10",
@@ -20,6 +22,7 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
     "metro-react-native-babel-preset": "^0.54.1"
@@ -44,5 +47,6 @@
     "assets": [
       "./src/assets/fonts/"
     ]
-  }
+  },
+  "homepage": "https://emasuriano.github.io/maintainable-icon-system-react"
 }
