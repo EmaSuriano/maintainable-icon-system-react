@@ -2,11 +2,11 @@
 
 > Demo Repository to setup an icon system that can be easily maintainable between React and React Native
 
-This repository serves as example of this article: [Building a Maintainable Icon System in React and React Native]()
+This repository serves as example of this article: [Building a Maintainable Icon System in React and React Native][article-link]
 
 ![Demo](https://user-images.githubusercontent.com/3399429/60707633-7bfb4700-9f0c-11e9-9279-8e8764c28bb9.png)
 
-Collection of icons used: Landmarks and Monuments from [FlatIcon]([article-link])
+Collection of icons used: Landmarks and Monuments from [FlatIcon](https://www.flaticon.com/packs/landmarks-and-monuments-18)
 
 ## Setup the project
 
