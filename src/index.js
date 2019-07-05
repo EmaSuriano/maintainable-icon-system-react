@@ -1,7 +1,7 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
-import * as Icons from './components/Icon';
+import ReactDOM from 'react-dom';
 import Grid from './components/Grid';
+import * as Icons from './components/Icon';
 import randomColor from 'randomcolor';
 
 const App = () => (
