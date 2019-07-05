@@ -50,3 +50,4 @@ In case you want to run the Android or iOS project you need to first setup the e
 MIT.
 
 [article-link]: https://darcs.nomeata.de/screen-message/sm.html#t=Coming%20soon%20...%20
+[demo-link]: https://emasuriano.github.io/maintainable-icon-system-react/index.html
