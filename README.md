@@ -1,5 +1,7 @@
 # maintainable-icon-system-react
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/EmaSuriano/maintainable-icon-system-react.svg)](https://greenkeeper.io/)
+
 > Demo Repository to setup an icon system that can be easily maintainable between React and React Native
 
 This repository serves as example of this article: [Building a Maintainable Icon System in React and React Native][article-link]
