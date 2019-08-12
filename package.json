@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "scripts": {
     "generate-icon": "node scripts/generate-icon-system",
-    "start-web": "react-scripts start",
-    "build-web": "react-scripts build",
-    "start-ios": "react-native run-ios & react-native start",
-    "start-android": "react-native run-android & react-native start",
+    "start-web": "npm run generate-icon && react-scripts start",
+    "build-web": "npm run generate-icon && react-scripts build",
+    "start-ios": "npm run generate-icon && react-native run-ios & react-native start",
+    "start-android": "npm run generate-icon && react-native run-android & react-native start",
     "lint": "eslint src",
     "predeploy": "npm run build-web",
     "deploy": "gh-pages -d build"
