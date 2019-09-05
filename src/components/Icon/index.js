@@ -1,8 +1,8 @@
 import React from 'react';
 import Icon from './Icon';
 
+export const Aaaatest = props => <Icon {...props} name="aaaatest" />;
 export const Activity = props => <Icon {...props} name="activity" />;
-export const Activity2 = props => <Icon {...props} name="activity2" />;
 export const Airplay = props => <Icon {...props} name="airplay" />;
 export const AlertCircle = props => <Icon {...props} name="alert-circle" />;
 export const AlertOctagon = props => <Icon {...props} name="alert-octagon" />;

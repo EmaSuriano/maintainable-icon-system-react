@@ -1,5 +1,5 @@
+import { ReactComponent as Aaaatest } from './aaaatest.svg';
 import { ReactComponent as Activity } from './activity.svg';
-import { ReactComponent as Activity2 } from './activity2.svg';
 import { ReactComponent as Airplay } from './airplay.svg';
 import { ReactComponent as AlertCircle } from './alert-circle.svg';
 import { ReactComponent as AlertOctagon } from './alert-octagon.svg';
@@ -283,8 +283,8 @@ import { ReactComponent as ZoomIn } from './zoom-in.svg';
 import { ReactComponent as ZoomOut } from './zoom-out.svg';
 
 export default {
+"aaaatest": Aaaatest, 
 "activity": Activity, 
-"activity2": Activity2, 
 "airplay": Airplay, 
 "alert-circle": AlertCircle, 
 "alert-octagon": AlertOctagon, 
