@@ -42,9 +42,21 @@ const generateWebIconMap = (icons, { dir }) => {
 };
 
 const generateReactNativeAsset = (icons, { dir, fontName, fontDir }) => {
-  execSync(
-    `icon-font-generator ./${dir}/*.svg -o ./${fontDir} -n ${fontName} -c false --html false --types ttf`,
-  );
+  const generatorOptions = {
+    name: fontName,
+    css: false,
+    html: false,
+    types: 'ttf',
+    out: fontDir,
+    height: 1000,
+    normalize: true,
+  };
+
+  const optionString = Object.entries(generatorOptions)
+    .map(([option, value]) => `--${option} ${value}`)
+    .join(' ');
+
+  execSync(`icon-font-generator ./${dir}/*.svg ${optionString}`);
 
   const glyphMap = JSON.parse(readFileSync(`./${fontDir}/${fontName}.json`));
 
