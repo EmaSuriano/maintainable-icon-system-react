@@ -48,8 +48,7 @@ const generateReactNativeAsset = (icons, { dir, fontName, fontDir }) => {
     html: false,
     types: 'ttf',
     out: fontDir,
-    height: 1000,
-    normalize: true,
+    height: 500,
   };
 
   const optionString = Object.entries(generatorOptions)
