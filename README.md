@@ -8,9 +8,9 @@ This repository serves as example of this article: [Building a Maintainable Icon
 
 ### [Live Web Demo ⚛️][demo-link]
 
-![Demo](https://user-images.githubusercontent.com/3399429/60707633-7bfb4700-9f0c-11e9-9279-8e8764c28bb9.png)
+![Demo](./docs/demo.gif)
 
-Collection of icons used: Landmarks and Monuments from [FlatIcon](https://www.flaticon.com/packs/landmarks-and-monuments-18)
+Collection of icons used: [Material Design](https://material.io/resources/icons/?style=baseline).
 
 ## Setup the project
 
