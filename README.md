@@ -1,4 +1,4 @@
-# maintainable-icon-system-react
+\# maintainable-icon-system-react
 
 > Demo Repository to setup an icon system that can be easily maintainable between React and React Native
 
@@ -49,5 +49,5 @@ In case you want to run the Android or iOS project you need to first setup the e
 
 MIT.
 
-[article-link]: https://darcs.nomeata.de/screen-message/sm.html#t=Coming%20soon%20...%20
+[article-link]: https://emasuriano.com/blog/building-a-maintainable-icon-system-for-react-and-react-native
 [demo-link]: https://emasuriano.github.io/maintainable-icon-system-react/index.html
